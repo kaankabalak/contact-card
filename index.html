@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Card</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+	<script type="text/javascript">
+		$('document').ready(function() {
+			var count = 0;
+			$('form').submit(function(){
+				var description = $('textarea').val();
+				$('body').data("desc", description);
+				console.log($('body').data("desc"));
+				$('#contacts').append('<div id="newcontact"><h1>' + $('#first_name').val() + ' ' + $('#last_name').val() + '</h1><p>Click for description</p></div>');
+				return false;
+			});
+			$(document).on('click', 'p', function(){
+				var description = $('body').data('desc');
+	        	$(this).parent().html('<p id="text-desc">' + description + '</p>');
+	        	return false;
+	    	 });	
+		});
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="content">
+			<form action="process.php" method="post">
+				<div class="form-field">
+					<label for="first_name">First Name:</label>
+					<input type="text" id="first_name" name="first_name">
+				</div>
+				<div class="form-field">
+					<label for="last_name">Last Name:</label>
+					<input type="text" id="last_name" name="last_name">
+				</div>	
+				<p>Description:</p>
+			    <textarea name="description"></textarea>
+				<input id="button" type="submit" value="Add User">
+			</form>
+    	</div>
+    	<div class="content">
+    		<div id="contacts"></div>
+    	</div>
+    </div>
+</body>
+</html>

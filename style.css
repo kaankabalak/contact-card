@@ -1,0 +1,57 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Helvetica';
+}
+#wrapper{
+	width: 515px;
+	height: auto;
+	margin:0 auto;
+	background-color: white;
+}
+.content{
+	width: 215px;
+	height: inherit;
+	background-color: white;
+	display: inline-block;
+	vertical-align: top;
+	padding: 20px;
+}
+label{
+	width: 90px;
+	height: 16px;
+	display: inline-block;
+}
+textarea{
+	width: 210px;
+	height: 70px;
+}
+.form-field{
+	margin-bottom: 5px;
+}
+form p{
+	margin-bottom: 5px;
+}
+#button{
+	margin-top: 7px;
+}
+#newcontact{
+	width: inherit;
+	height: 100px;
+	background-color: white;
+	border: 1px solid black;
+	margin-bottom: 10px;
+}
+#newcontact p {
+	text-align: center;
+}
+h1 {
+	text-align: center;
+	margin-top: 37px;
+	font-size: 18pt;
+}
+#newcontact p#text-desc{
+	padding: 10px;
+    text-align: left;
+    word-wrap: break-word;
+}
