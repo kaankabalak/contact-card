@@ -9,15 +9,12 @@
 			var count = 0;
 			$('form').submit(function(){
 				var description = $('textarea').val();
-				$('body').data("desc", description);
-				console.log($('body').data("desc"));
-				$('#contacts').append('<div id="newcontact"><h1>' + $('#first_name').val() + ' ' + $('#last_name').val() + '</h1><p>Click for description</p></div>');
+				console.log(description);
+				$('#contacts').append('<div id="newcontact"><h1>' + $('#first_name').val() + ' ' + $('#last_name').val() + '</h1><p>Click for description</p><p id="hidden">' + description + '</p></div>');
 				return false;
 			});
-			$(document).on('click', 'p', function(){
-				var description = $('body').data('desc');
-	        	$(this).parent().html('<p id="text-desc">' + description + '</p>');
-	        	return false;
+			$(document).on('click', '#newcontact', function(){
+	        	$(this).children().toggle();
 	    	 });	
 		});
 	</script>

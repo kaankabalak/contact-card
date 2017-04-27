@@ -50,8 +50,9 @@ h1 {
 	margin-top: 37px;
 	font-size: 18pt;
 }
-#newcontact p#text-desc{
+p#hidden {
 	padding: 10px;
     text-align: left;
     word-wrap: break-word;
+	display: none;
 }
